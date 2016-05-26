@@ -7,23 +7,24 @@ $(document).ready(function() {
 		$('form').fadeOut(500);
 		$('.wrapper').addClass('form-success');
 	});
-	
-    $('#goReg').click(function(event){ 
+
+    $('#goReg').click(function(event){
 		event.preventDefault();
         $('#logForm').hide();
 		$('#regForm').show();
     });
-	
+
 	$('#goLog').click(function(event){
 		event.preventDefault();
         $('#logForm').show();
 		$('#regForm').hide();
     });
-	
+
 	$("#reg-button").click(function(event){
 		event.preventDefault();
 		$('form').fadeOut(500);
 		$('.wrapper').addClass('form-success');
 	});
-	
+
 });
+
