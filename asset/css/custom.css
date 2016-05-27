@@ -1120,6 +1120,10 @@ caption{
     /*margin-bottom: 50px;*/
 }
 
-.myMargin{
+.myMargin {
     margin-bottom: 50px;
+}
+
+.myTop{
+    margin-top: 50px;
 }

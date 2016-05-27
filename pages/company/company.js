@@ -1,11 +1,13 @@
 angular.module('stockApp').controller('CompanyCtrl', ['$scope', '$http', function($scope, $http){
 
+    $scope.activeIndex = 'PersonalInfo' ;
     var imageDir = "asset/images/" ;
     $scope.menu = [
-        {id:"DepositMenu",      title:"ویرایش موجودی", image:imageDir+"cash.png",   name:"ویرایش موجودی"},
-        {id:"OrderMenu",        title:"خرید و فروش",   image:imageDir+"order.png",  name:"نماد جدید"},
-        {id:"StatusMenu",       title:"بازار",         image:imageDir+"status.png", name:"نبض بازار"},
-        {id:"ConfigMenu",       title:"تنظیمات",       image:imageDir+"config.png", name:"تنظیمات"}
+        {id:"PersonalInfo",      title:"", image:imageDir+"cash.png",   name:"اطلاعات شخصی"},
+        {id:"CompanySymbolList",       title:"",              image:imageDir+"config.png", name:"نمادهای شرکت"},
+        {id:"AddSymbol",        title:"",   image:imageDir+"order.png",  name:"نماد جدید"},
+        {id:"ChargeSymbol",       title:"",              image:imageDir+"config.png", name:"شارژ نماد"},
+        {id:"MarketInfo",       title:"",         image:imageDir+"status.png", name:"نبض بازار"}
     ];
 
     $scope.isActive = function(i){

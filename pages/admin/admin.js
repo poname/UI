@@ -12,7 +12,16 @@ angular.module('stockApp').controller('AdminCtrl', ['$scope', '$http', function(
         {id:"Credits",       title:"",       image:imageDir+"config.png", name:"امور مالی"},
 
 
-        {id:"Reports",       title:"",       image:imageDir+"config.png", name:"گزارش ها"}
+        {id:"Reports",       title:"",       image:imageDir+"config.png", name:"گزارش ها"},
+
+        // financial permissions to admin
+        {id:"ManageCreditRequests",       title:"",    image:imageDir+"report.png", name:"مدیریت درخواست"},
+        {id:"ManageLimitedOrders",       title:"",       image:imageDir+"backup.png", name:"مدیریت سفارش ها"},
+
+        // company permisiions to admin
+        {id:"CompanySymbolList",       title:"",              image:imageDir+"config.png", name:"نمادهای شرکت"},
+        {id:"AddSymbol",        title:"",   image:imageDir+"order.png",  name:"نماد جدید"},
+        {id:"ChargeSymbol",       title:"",              image:imageDir+"config.png", name:"شارژ نماد"}
     ];
 
     $scope.isActive = function(i){
@@ -35,7 +44,7 @@ angular.module('stockApp').controller('AdminCtrl', ['$scope', '$http', function(
     /// Reports Part :: Filter.html
     $scope.dater = function(x){
         return (new Date(x)).toDateString();
-    }
+    };
 
     $scope.filteredExchanges = [] ;
 
@@ -48,7 +57,7 @@ angular.module('stockApp').controller('AdminCtrl', ['$scope', '$http', function(
 
     $scope.search = function(){
 
-        parameters = {
+        var parameters = {
             id : $scope.IdNum,
             lowerPrice : $scope.minPrice,
             upperPrice : $scope.maxPrice,
