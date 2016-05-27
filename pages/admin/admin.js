@@ -4,21 +4,25 @@ angular.module('stockApp').controller('AdminCtrl', ['$scope', '$http', function(
     $scope.activeIndex = 'PersonalInfo' ;
     var imageDir = "asset/images/" ;
     $scope.menu = [
-        {id:"PersonalInfo",      title:"اطلاعات شخصی", image:imageDir+"cash.png",   name:"پروفایل"},
+        // customer permissions to admin
+        {id:"PersonalInfo",      title:"", image:imageDir+"cash.png",   name:"اطلاعات شخصی"},
         {id:"Orders",        title:"",   image:imageDir+"order.png",  name:"سفارش ها"},
         {id:"SymbolList",        title:"",   image:imageDir+"order.png",  name:"لیست نمادها"},
-        {id:"MarketInfo",       title:"بازار",         image:imageDir+"status.png", name:"نبض بازار"},
+        {id:"MarketInfo",       title:"",         image:imageDir+"status.png", name:"نبض بازار"},
         {id:"ShareBasket",       title:"",       image:imageDir+"config.png", name:"سبد سهام"},
         {id:"Credits",       title:"",       image:imageDir+"config.png", name:"امور مالی"},
 
-
+        // admin specific permissions
         {id:"Reports",       title:"",       image:imageDir+"config.png", name:"گزارش ها"},
+        {id:"ChangeLimit",       title:"",       image:imageDir+"config.png", name:"اعمال محدودیت"},
+        {id:"CustomersList",       title:"",       image:imageDir+"config.png", name:"کاربران"},
+        {id:"AddRole",       title:"",       image:imageDir+"config.png", name:"تعیین سطح دسترسی"},
 
         // financial permissions to admin
         {id:"ManageCreditRequests",       title:"",    image:imageDir+"report.png", name:"مدیریت درخواست"},
         {id:"ManageLimitedOrders",       title:"",       image:imageDir+"backup.png", name:"مدیریت سفارش ها"},
 
-        // company permisiions to admin
+        // company permissions to admin
         {id:"CompanySymbolList",       title:"",              image:imageDir+"config.png", name:"نمادهای شرکت"},
         {id:"AddSymbol",        title:"",   image:imageDir+"order.png",  name:"نماد جدید"},
         {id:"ChargeSymbol",       title:"",              image:imageDir+"config.png", name:"شارژ نماد"}
