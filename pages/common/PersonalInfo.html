@@ -1,7 +1,8 @@
 <p></p>
 <ul class="list-group">
-    <li class="list-group-item list-group-item-danger">شناسه: {{ userInfo.id }}</li>
-    <li class="list-group-item list-group-item-success">بودجه: {{ userInfo.credit }}</li>
+    <li class="list-group-item list-group-item-text">شناسه: {{ userInfo.id }}</li>
+    <li class="list-group-item list-group-item-success">اعتبار فعلی: {{ userInfo.credit }}</li>
+    <li class="list-group-item list-group-item-danger">اعتبار موجود در صف خرید: {{ userInfo.blockedCredit }}</li>
     <li class="list-group-item list-group-item-info">نام: {{ userInfo.name }}</li>
     <li class="list-group-item list-group-item-warning">نام خانوادگی: {{ userInfo.family }}</li>
 </ul>

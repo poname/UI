@@ -23,4 +23,11 @@ angular.module('stockApp').controller('CustomerCtrl', ['$scope', '$http', functi
     $scope.userInfo = {id:51, name:'غلام'};
 
     $scope.welcome = $scope.userInfo.name + " عزیز خوش آمدید " ;
+
+    $scope.symbolList = ['Rena', 'Saipa'];
+
+    $scope.setSymbol = function(s){
+        $scope.selectedSymbol = s;
+        //reloadSymbolInfo(s);
+    };
 }]);

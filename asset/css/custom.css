@@ -32,7 +32,7 @@ body {
 
 form{
     padding-bottom: 20px;
-    background: rgba(19, 35, 47, 0.9);
+
     padding: 40px;
     max-width: 600px;
     margin: 40px auto;
@@ -177,6 +177,10 @@ h3.title {
     }
 
     .btn-success{
+        margin-top: 10px;
+    }
+
+    .btn-danger{
         margin-top: 10px;
     }
 
