@@ -265,7 +265,7 @@ ul#usermenu {
 }
 
 #head {
-    background: #FFF;
+
     border-bottom: 1px solid #d1d8e2;
     padding: 2% 3%;
 }
@@ -1109,4 +1109,8 @@ caption{
         background: none;
         padding: 5px;
     }
+}
+
+.row{
+    margin-bottom: 50px;
 }

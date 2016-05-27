@@ -1,0 +1,13 @@
+<div>
+    <span class="bg-info">موجودی فعلی: {{ userInfo.credit }}</span>
+</div>
+
+<div class="btn-group btn-group-justified" ng-init="selected = 0">
+    <a ng-click="selected = 0" class="btn btn-warning">درخواست های منتظر تایید</a>
+    <a ng-click="selected = 1" class="btn btn-success">افزایش موجودی</a>
+    <a ng-click="selected = -1" class="btn btn-danger">کاهش موجودی</a>
+</div>
+
+<div ng-show="selected == 0" ng-include="'pages/common/CreditRequests.html'"></div>
+<div ng-show="selected == 1" ng-include="'pages/common/DepositRequest.html'"></div>
+<div ng-show="selected == -1" ng-include="'pages/common/WithdrawRequest.html'"></div>
