@@ -179,66 +179,7 @@ app.controller('mainCtrl', function($scope, $http, $interval) {
     //system will be auto updated
     $interval($scope.init, AUTO_UPDATE_DURATION);
 
-    $scope.dater = function(x){
-        return (new Date(x)).toDateString();
-    }
 
-    $scope.filteredExchanges = [] ;
-
-    $scope.checkedPR = false; 
-    $scope.checkedID = false;
-    $scope.checkedUN = false;
-    $scope.checkedSB = false;
-    $scope.checkedDate = false;
-    $scope.checkedDate2 = false;
-
-    $scope.search = function(){
-       
-        parameters = {
-            id : $scope.IdNum,
-            lowerPrice : $scope.minPrice,
-            upperPrice : $scope.maxPrice,
-            name : $scope.UnameSerach,
-            symbol: $scope.symbolSearch,
-            fromDate : '%',
-            toDate : '%'
-        };
-
-        if(!$scope.checkedPR){
-            parameters.lowerPrice  = '%' ;
-            parameters.upperPrice = '%' ;
-        }
-        if(!$scope.checkedID){
-            parameters.id = '%' ;
-        }
-        if(!$scope.checkedUN){
-            parameters.name = '%' ;
-        }
-        if(!$scope.checkedSB){
-            parameters.symbol = '%' ;
-        }
-        if(!$scope.checkedDate){
-            parameters.fromDate = '%' ;
-        }
-        else{
-            parameters.fromDate = (new Date($scope.YY1, $scope.MM1-1, $scope.DD1, 0, 0, 0, 0)).getTime();
-        }
-        if(!$scope.checkedDate2){
-            parameters.toDate = '%' ;
-        }
-        else{
-            parameters.toDate = (new Date($scope.YY2, $scope.MM2-1, $scope.DD2, 0, 0, 0, 0)).getTime();
-        }
-
-        $http({
-            method : "POST",
-            url : "filter",
-            params : parameters
-        }).then(function(response) {
-            $scope.filteredExchanges = response.data;
-            //alert(response.data);
-        });
-    };
 
     $scope.sellEnable = true;
     $scope.doSell = function(){

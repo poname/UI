@@ -29,7 +29,7 @@ body {
     background: #1c1c1c url(../images/bg.jpg) repeat;
     line-height: 23px;
 }
-
+/*
 form{
     padding-bottom: 20px;
 
@@ -39,7 +39,7 @@ form{
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
-
+*/
 
 
 
@@ -1117,5 +1117,5 @@ caption{
 }
 
 .row{
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
