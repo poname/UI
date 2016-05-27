@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c998495-93b3-458f-b49d-aa8605a4bb59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/common/CreditRequests.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/common/DepositRequest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/common/WithdrawRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/css/custom.css" afterPath="$PROJECT_DIR$/asset/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/common/Credits.html" afterPath="$PROJECT_DIR$/pages/common/Credits.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/common/PersonalInfo.html" afterPath="$PROJECT_DIR$/pages/common/PersonalInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/common/ShareBasket.html" afterPath="$PROJECT_DIR$/pages/common/ShareBasket.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/common/SymbolList.html" afterPath="$PROJECT_DIR$/pages/common/SymbolList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/customer/customer.js" afterPath="$PROJECT_DIR$/pages/customer/customer.js" />
-    </list>
+    <list default="true" id="4c998495-93b3-458f-b49d-aa8605a4bb59" name="Default" comment="" />
     <ignored path="UI.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,8 +76,8 @@
       <file leaf-file-name="SymbolList.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/common/SymbolList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8022182">
-              <caret line="23" column="103" selection-start-line="23" selection-start-column="103" selection-end-line="23" selection-end-column="103" />
+            <state vertical-scroll-proportion="0.62846583">
+              <caret line="164" column="47" selection-start-line="164" selection-start-column="47" selection-end-line="164" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -788,15 +777,15 @@
       <workItem from="1464258388764" duration="6777000" />
       <workItem from="1464267163242" duration="6405000" />
       <workItem from="1464275333962" duration="13620000" />
-      <workItem from="1464332295325" duration="11468000" />
+      <workItem from="1464332295325" duration="11616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38270000" />
+    <option name="totallyTimeSpent" value="38418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1241,8 +1230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/common/SymbolList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8022182">
-          <caret line="23" column="103" selection-start-line="23" selection-start-column="103" selection-end-line="23" selection-end-column="103" />
+        <state vertical-scroll-proportion="0.62846583">
+          <caret line="164" column="47" selection-start-line="164" selection-start-column="47" selection-end-line="164" selection-end-column="47" />
           <folding />
         </state>
       </provider>
