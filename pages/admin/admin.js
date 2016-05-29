@@ -17,6 +17,7 @@ angular.module('stockApp').controller('AdminCtrl', ['$scope', '$http', function(
         {id:"ChangeLimit",       title:"",       image:imageDir+"config.png", name:"اعمال محدودیت"},
         {id:"CustomersList",       title:"",       image:imageDir+"config.png", name:"کاربران"},
         {id:"AddRole",       title:"",       image:imageDir+"config.png", name:"تعیین سطح دسترسی"},
+        {id:"PendingSymbols",       title:"",       image:imageDir+"config.png", name:"نمادهای منتظر"},
 
         // financial permissions to admin
         {id:"ManageCreditRequests",       title:"",    image:imageDir+"report.png", name:"مدیریت درخواست"},
@@ -99,11 +100,33 @@ angular.module('stockApp').controller('AdminCtrl', ['$scope', '$http', function(
 
         $http({
             method : "POST",
-            url : "filter",
+            url : "Filter.action",
             params : parameters
         }).then(function(response) {
             $scope.filteredExchanges = response.data;
             //alert(response.data);
         });
     };
+    
+    
+	$http({
+        method : "POST",
+        url : "PendingSymbols.action"
+
+    }).then(function(response) {
+    	$scope.pendingSymbols = response.data;
+    	//alert(response.data);
+    });
+
+	$scope.verifyPendingSymbol = function(name){
+		$http({
+            method : "POST",
+            url : "VerifySymbol.action",
+            params : {symbol: name}
+        }).then(function(response) {
+            $scope.message = response.data;
+            //alert(response.data);
+        });
+	};
+	
 }]);

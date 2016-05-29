@@ -14,46 +14,68 @@
   <!-- SPELLS -->
   <script src="asset/js/angular.min.js"></script>
   <script src="asset/js/angular-route.js"></script>
-  <script src="asset/js/jquery-ui.js"></script>
   <script src="asset/js/jquery.js"></script>
+  <script src="asset/js/jquery-ui.js"></script>
   <script src="asset/js/bubble.js"></script>
 
   <script src="stock.js"></script>
-
-    <script src="pages/admin/admin.js"></script>
-    <script src="pages/company/company.js"></script>
-    <script src="pages/customer/customer.js"></script>
-    <script src="pages/financial/financial.js"></script>
-    <script src="pages/login/login.js"></script>
 
 </head>
 
 <!-- define angular controller -->
 <body>
 
-  <nav class="navbar navbar-default">
-    <div class="container">
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#login"><i class="fa fa-home"></i> Login</a></li>
-        <li><a href="#admin"><i class="fa fa-shield"></i> Admin</a></li>
-        <li><a href="#company"><i class="fa fa-comment"></i> Company</a></li>
-        <li><a href="#customer"><i class="fa fa-shield"></i> Customer</a></li>
-        <li><a href="#financial"><i class="fa fa-shield"></i> Financial</a></li>
-      </ul>
-    </div>
-  </nav>
-
-
-
-  <div id="main">
+  <div id="main" ng-controller="AdminCtrl2">
 
     <!-- angular templating -->
 		<!-- this is where content will be injected -->
     <div class="container-fluid">
-      <div class="row">
-        <div ng-view></div>
+      <div  ng-show="showLogin" class="row myMargin">
+        <div ng-include="'pages/login/login.html'"></div>
+      </div>
+      <div class="row myMargin myTop" ng-show="!showLogin" >
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <div ng-include="'pages/common/navbar.html'"></div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <div ng-include="'pages/common/header.html'"></div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
 
+            <!-- customer -->
+            <div ng-show="hasRole('customer') || hasRole('admin')">
+              <div ng-show="isActive('Orders')" ng-include="'pages/customer/Orders.html'"></div>
+              <div ng-show="isActive('ShareBasket')" ng-include="'pages/customer/ShareBasket.html'"></div>
+              <div ng-show="isActive('SymbolList')" ng-include="'pages/customer/SymbolList.html'"></div>
+              <div ng-show="isActive('Credits')" ng-include="'pages/customer/Credits.html'"></div>
+            </div>
+            <!-- admin -->
+            <div ng-show="hasRole('admin')">
+              <div ng-show="isActive('Reports')" ng-include="'pages/admin/Filter.html'"></div>
+              <div ng-show="isActive('ChangeLimit')" ng-include="'pages/admin/ChangeOrderLimit.html'"></div>
+              <div ng-show="isActive('CustomersList')" ng-include="'pages/admin/CustomersList.html'"></div>
+              <div ng-show="isActive('AddRole')" ng-include="'pages/admin/AddRole.html'"></div>
+            </div>
+            <!-- financial -->
+            <div ng-show="hasRole('financial') || hasRole('admin')">
+              <div ng-show="isActive('ManageCreditRequests')" ng-include="'pages/financial/ManageCreditRequests.html'"></div>
+              <div ng-show="isActive('ManageLimitedOrders')" ng-include="'pages/financial/ManageLimitedOrders.html'"></div>
+            </div>
+            <!-- company -->
+            <div ng-show="hasRole('company') || hasRole('admin')">
+              <div ng-show="isActive('AddSymbol')" ng-include="'pages/company/AddSymbol.html'"></div>
+              <div ng-show="isActive('CompanySymbolList')" ng-include="'pages/company/CompanySymbolList.html'"></div>
+              <div ng-show="isActive('ChargeSymbol')" ng-include="'pages/company/ChargeSymbol.html'"></div>
+            </div>
+
+            <!-- common -->
+            <div ng-show="hasRole('customer') ||hasRole('company') || hasRole('admin') || hasRole('financial')">
+              <div ng-show="isActive('MarketInfo')" ng-include="'pages/customer/MarketInfo.html'"></div>
+              <div ng-show="isActive('PersonalInfo')" ng-include="'pages/customer/PersonalInfo.html'"></div>
+            </div>
+
+          </div>
+        </div>
+        <div ng-include="'pages/customer/SymbolInfoModal.html'"></div>
       </div>
     </div>
     

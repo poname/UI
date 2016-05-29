@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" id="usermenu">
 
-            <li ng-repeat="item in menu" ng-class="{ active: isActive(item.id) }" id="item.id " data-ng-click="">
+            <li ng-repeat="item in menu" ng-show="hasRole(item.role)" ng-class="{ active: isActive(item.id) }" id="item.id " data-ng-click="">
                 <a href="" data-ng-click="goToPage(item.id)">
                     <img ng-src="{{ item.image }}">
                 {{ item.name }}

@@ -18,5 +18,34 @@ angular.module('stockApp').controller('CompanyCtrl', ['$scope', '$http', functio
         //alert($scope.activeIndex + '\t' + i);
         $scope.activeIndex = i ;
     };
+    
+    var ajax = function(url, params, resp) {
+    	$http({
+            method : "POST",
+            url : url,
+            params: params
 
+        }).then(function(response) {
+        	resp = response.data;
+        	//alert(response.data);
+        });
+	};
+
+    
+    $http({
+        method : "POST",
+        url : "MyProfile.action"
+
+    }).then(function(response) {
+    	
+    	$scope.userInfo = response.data.user ;
+    	$scope.userInfo.blockedCredit = response.data.blockedCredit ;
+    	$scope.userInfo.roles = response.data.roles ;
+    	
+    });
+    
+    $scope.doAddSymbol = function(symbol){
+    	ajax("AddSymbol.action", {symbol:symbol}, $scope.message);
+    };
+    
 }]);
